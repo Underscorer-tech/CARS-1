@@ -79,9 +79,9 @@ class Game {
 
 
 
-
-        textSize(15);
-        text(allPlayers[plr].name , cars[index-1].x=x,cars[index].y+75)
+           fill("black")
+        textSize(25);
+        text(allPlayers[plr].name , cars[index-1].x-15,cars[index-1].y+75)
       }
 
     }
@@ -94,13 +94,13 @@ class Game {
 
       if (keyIsDown(37)) {
 
-        xVel -= 0.3;
+        xVel -= 0.9;
 
       }
 
       if (keyIsDown(39)) {
 
-        xVel += 0.3;
+        xVel += 0.9;
 
       }
 
@@ -109,7 +109,15 @@ class Game {
   } else if (keyIsDown(38) && yVel>0 && player.index !== null){
 
   yVel-=0.1;
+  xVel=0;
  
+  }
+
+
+  if (keyIsDown(40)){
+
+  yVel-=0.9
+
   }
 
 
@@ -122,7 +130,7 @@ class Game {
     player.update()
 
 
-    if (player.distance > 3860) {
+    if (player.distance > 3960) {
       gameState = 2;
     }
  
