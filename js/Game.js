@@ -81,7 +81,7 @@ class Game {
 
            fill("black")
         textSize(25);
-        text(allPlayers[plr].name , cars[index-1].x-15,cars[index-1].y+75)
+        text(allPlayers[plr].name , cars[index-1].x-15,cars[index-1].y+75);
       }
 
     }
